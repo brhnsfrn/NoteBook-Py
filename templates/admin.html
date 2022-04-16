@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content_header %}
+  {{ super() }}
+  <div id="header">
+    <h1>Notlarım</h1>
+    <br>
+    <form action="{{url_for('add')}}" method="post">
+        <input class="editor" type="button" id="bold" value="B" title="Bold">
+        <input class="editor" type="button" id="italic" value="I" title="Italic">
+        <input class="editor" type="button" id="underlined" value="U" title="Underlined">
+        <input class="editor" type="button" id="deleted" value="del" title="Deleted">
+        <input class="editor" type="button" id="pre" value="pre" title="Preformatted">
+        <input class="editor" type="button" id="p" value="p" title="Paragraph">
+        <input class="editor" type="button" id="img" value="img" title="Image">
+        <input class="editor" type="button" id="li" value="li" title="List">
+        <input class="editor" type="button" id="href" value="href" title="Link">
+        <input class="editor" type="button" id="br" value="br" title="Break">
+        <br/>
+        <textarea class="editor" id="note" name="note" cols=85 rows=5></textarea>
+        <input class="editor" type="submit"/>
+    </form>
+</div>
+{% endblock %}
+{% block content %}
+    {% set i = notes|length +1 %}
+    {% if i == 1%}
+      <center><h2>-</h2></center>
+    {% else %}
+      {% for item in notes | reverse %}
+      <b>{{ datetime.datetime.strptime(item['created_date'], "%Y-%m-%d %H:%M:%S.%f").strftime("%d/%m/%Y %H:%M") }}</b>
+      <button id="{{ item['id'] }}" title="Delete">X</button><br>
+          <p>
+              <a href="{{ item['id'] }}"><b>{{ i - loop.index }}</b>.</a>
+              {{ item['content'] | safe }}
+          </p>
+          <hr>
+      {% endfor %}
+    {% endif %}
+{% endblock %}
+{% block script %}
+  <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+{% endblock %}

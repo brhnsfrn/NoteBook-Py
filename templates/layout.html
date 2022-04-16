@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notlarım</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% endblock %}
+</head>
+<body>
+    {% block content_header %}
+    {% endblock %}
+    <hr>
+    
+    <div id="notes">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+    <p align="right">made with <i class="fa-solid fa-heart fa-2xs"></i> by <a href="https://github.com/brhnsfrn">@brhnsfrn</a></p>
+    {% block script %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content_header %}
+  {{ super() }}
+  <div id="header">
+    <h1>Notlarım <a href="{{ url_for('administrator') }}" title="Login"><i class="login fa-solid fa-right-to-bracket"></i></a></h1>
+  </div>
+{% endblock %}
+{% block content %}
+    {% set i = notes|length +1 %}
+    {% if i == 1%}
+      <center><h2>-</h2></center>
+    {% else %}
+      {% for item in notes | reverse %}
+          <b>{{ datetime.datetime.strptime(item['created_date'], "%Y-%m-%d %H:%M:%S.%f").strftime("%d/%m/%Y %H:%M") }}</b><br>
+          <p>
+              <a href="{{ item['id'] }}"><b>{{ i - loop.index }}</b>.</a>
+              {{ item['content'] | safe }}
+          </p>
+          <hr>
+      {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+body {
+    background: black;
+    color: cadetblue;
+}
+
+button {
+	border-style:none;
+	margin-left:20px;
+	background-color: black;
+	color: red;
+}
+
+a {
+	color: cadetblue;
+}
+
+.login{
+	float: right;
+}
+
+.editor{
+	color:#00FF00; 
+	background-color:#000000;
+}
+
+#bold{
+	font-weight: bold !important;
+}
+
+#italic{
+	font-style: italic;
+}
+
+#underlined{
+	text-decoration: underline;
+}
+
+#deleted{
+	text-decoration: line-through;
+}
