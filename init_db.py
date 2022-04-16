@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from datetime import datetime
-import datetime
 import sqlite3
 
 DATABASE = 'database.db'

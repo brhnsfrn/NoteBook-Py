@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -- coding: utf-8 --
 import datetime
-from sqlite3 import connect
 from flask import Flask, make_response, redirect, render_template, request, url_for
 from authenticate import authorization
 from init_db import init_db, get_db, query_db
