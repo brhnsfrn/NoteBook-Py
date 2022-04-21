@@ -1,7 +1,7 @@
 # SketchBook
 Multi-Platform note application
 ---
-[Screenshot](https://raw.githubusercontent.com/brhnsfrn/SketchBook/main/Qi2ChsGWEeykJQJCrBEABA.png)
+![Screenshot](https://www.site-shot.com/cached_image/Qi2ChsGWEeykJQJCrBEABA)
 [Prod](http://safran.nsupdate.info/not)
 
 > You can change username and password from authenticate.py line 7.
