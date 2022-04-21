@@ -5,7 +5,7 @@
 {% block content_header %}
   {{ super() }}
   <div id="header">
-    <h1>Notlarım <a href="{{ url_for('administrator') }}" title="Login"><i class="login fa-solid fa-right-to-bracket"></i></a></h1>
+    <h1>{{title}} <a href="{{ url_for('administrator') }}" title="Login"><i class="login fa-solid fa-right-to-bracket"></i></a></h1>
   </div>
 {% endblock %}
 {% block content %}

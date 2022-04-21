@@ -5,7 +5,7 @@
 {% block content_header %}
   {{ super() }}
   <div id="header">
-    <h1>Notlarım</h1>
+    <h1>{{title}}</h1>
     <br>
     <form action="{{url_for('add')}}" method="post">
         <input class="editor" type="button" id="bold" value="B" title="Bold">
