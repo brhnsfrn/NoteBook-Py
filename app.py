@@ -42,8 +42,7 @@ def administrator():
 @authorization
 def add():
     note = request.form['note']
-    newNote = Note(content = note)
-    db.session.add(newNote)
+    db.session.add(Note(content = note))
     db.session.commit()
     return redirect(url_for('administrator'))
 
