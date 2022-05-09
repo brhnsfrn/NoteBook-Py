@@ -14,7 +14,7 @@
       <center><h2>-</h2></center>
     {% else %}
       {% for item in notes | reverse %}
-          <b>{{ datetime.datetime.strptime(item['created_date'], "%Y-%m-%d %H:%M:%S.%f").strftime("%d/%m/%Y %H:%M") }}</b><br>
+          <b>{{ item['created_date'].strftime("%d/%m/%Y %H:%M") }}</b><br>
           <p>
               <a href="{{ item['id'] }}"><b>{{ i - loop.index }}</b>.</a>
               {{ item['content'] | safe }}
