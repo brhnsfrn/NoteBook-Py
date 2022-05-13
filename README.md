@@ -8,4 +8,4 @@ Multi-Platform note application
 
 > Also you can change page titles and html language from app.py line 23.
 
-> Don't forget to change the host, port and debug information in line 48 of app.py!
+> Don't forget to change the host, port and debug information in line 64 of app.py!
